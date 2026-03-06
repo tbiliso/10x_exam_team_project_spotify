@@ -1,0 +1,9 @@
+@use '../abstract/_variables'as *;
+
+body {
+    background-color: $primary-bg;
+    color: aliceblue;
+}
+.nav-bar {
+ display: flex;
+}
