@@ -1,0 +1,13 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.main-content {
+
+// 
+    background-color: rgba(6, 6, 6, 0.8);
+
+    .main-hdr {
+        @include display ($jus: space-between);
+        ;
+    }
+}

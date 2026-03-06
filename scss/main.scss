@@ -1,11 +1,20 @@
+@use './abstract/variables' as *;
+@use './abstract/mixins' as *;
+
+// 2. Base styles
 @use './base/reset';
 @use './base/typography';
-@use './abstract/variables';
-@use './abstract/mixins';
+
+// 3. Layout components
 @use './layout/header';
 @use './layout/navigation';
-@use './layout/footer';
 @use './layout/aside';
+@use './layout/footer';
+@use './layout/main';
+
+// 4. Components
 @use './components/button';
 @use './components/card';
-@use 'pages/home';
+
+// 5. Pages
+@use './pages/home';

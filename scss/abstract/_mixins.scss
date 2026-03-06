@@ -1,0 +1,24 @@
+@use './variables' as *;
+
+// width, height, border-radius
+@mixin cards ($wd, $heig, $br){
+    width: $wd;
+    height: $heig;
+    border-radius: $br;
+}
+
+// border-radius, padding, font-size
+@mixin btn ($br, $padv, $padh, $fs, $bg-clr, $txt-clr) {
+    border-radius: $br;
+    padding: $padv $padh;
+    font-size: $fs;
+    background-color: $bg-clr;
+    color: $txt-clr;
+}
+
+@mixin display ($disp: flex, $fdir: row, $jus: center, $aln: center) {
+    display: $disp;
+    flex-direction: $fdir;
+    justify-content: $jus;
+    align-items: $aln;
+}
