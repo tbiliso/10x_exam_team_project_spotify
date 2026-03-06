@@ -6,11 +6,12 @@
 }
 
 .main-content {
-
+    padding: 1.2rem 2.5rem;
     background-color: rgba(6, 6, 6, 0.8);
 
     .main-hdr {
         @include display ($jus: space-between);
+
         ;
     }
 
@@ -22,12 +23,43 @@
                 @include text-style (2rem, 700, #E0E0E0)
             }
         }
-        .category__card{
+        .category__body{
+            @include display ($jus:flex-star, $gap:1.1rem );
             width: 17rem;
-            .category__cover{
+        .category__card{
+            
+            .category__cover_discover{
                 @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/coverDiscoverWeekly.png');
-                
             }
+
+            .category__cover_DailyMix1{
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DailyMix1.png');
+            }
+
+            .category__cover_DailyMix2{
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DailyMix2.png');
+            }
+
+            .category__cover_DailyMix3{
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DailyMix3.png');
+            }
+
+            .category__cover_DailyMix4{
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DailyMix4.png');
+            }
+
+            .category__cover_DailyMix6{
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DailyMix6.png');
+            }
+
+            .category__cover_Nirvana{
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/Nirvana.png');
+            }
+
+            .category__cover_MixOutBoy{
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/FallOutBoy.png');
+            }
+            
             .category__title-group{
                 @include display ($jus: space-between);
                 .category__card-title{
@@ -38,5 +70,7 @@
                 @include text-style (1.2rem, 400, #898989);
             }
         }
+        }
+        
     }
 }
