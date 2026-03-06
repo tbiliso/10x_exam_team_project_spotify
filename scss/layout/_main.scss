@@ -1,13 +1,42 @@
 @use '../abstract/variables' as *;
 @use '../abstract/mixins' as *;
 
+.hidden {
+    display: none;
+}
+
 .main-content {
 
-// 
     background-color: rgba(6, 6, 6, 0.8);
 
     .main-hdr {
         @include display ($jus: space-between);
         ;
+    }
+
+    .category {
+        .category__hdr {
+            @include display ($jus: space-between);
+
+            .category__title {
+                @include text-style (2rem, 700, #E0E0E0)
+            }
+        }
+        .category__card{
+            width: 17rem;
+            .category__cover{
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/coverDiscoverWeekly.png');
+                
+            }
+            .category__title-group{
+                @include display ($jus: space-between);
+                .category__card-title{
+                    @include text-style (1.4rem, 500, #E0E0E0);
+                }
+            }
+            .category__content{
+                @include text-style (1.2rem, 400, #898989);
+            }
+        }
     }
 }

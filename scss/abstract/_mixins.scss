@@ -1,10 +1,17 @@
 @use './variables' as *;
 
 // width, height, border-radius
-@mixin cards ($wd, $heig, $br){
+@mixin card-cover ($wd, $heig, $br,$url){
     width: $wd;
     height: $heig;
     border-radius: $br;
+    background-image: url($url);
+}
+
+@mixin text-style ($fs,$weight, $clr ) {
+    font-size: $fs;
+    font-weight: $weight;
+    color: $clr;
 }
 
 // border-radius, padding, font-size
@@ -16,7 +23,7 @@
     color: $txt-clr;
 }
 
-@mixin display ($disp: flex, $fdir: row, $jus: center, $aln: center) {
+@mixin display ($disp: flex, $fdir: row, $jus: center, $aln: center, $gap: null) {
     display: $disp;
     flex-direction: $fdir;
     justify-content: $jus;
