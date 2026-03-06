@@ -89,6 +89,53 @@
                 @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/FallOutBoy.png');
             }
 
+            // Your top mixes category covers
+
+             .category__cover_RockMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/RockMix.png');
+            }
+
+            .category__cover_ChillMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/ChillMix.png');
+            }
+
+            .category__cover_PopMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/PopMix.png');
+            }
+
+            .category__cover_DraftPunkMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DraftPunkMix.png');
+            }
+
+            .category__cover_HappyMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/HappyMix.png');
+            }
+
+            .category__cover_DavidBowieMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DavidBowieMix.png');
+            }
+
+            .category__cover_UpbeatMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/UpbeatMix.png');
+            }
+
+            .category__cover_60sMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/60sMix.png');
+            }
+
+
+            // Your top mixes covers
+            .category__cover_GunsnRoses-YTM {
+                @include card-cover (17rem, 17rem, 50%, '/assets/image/GunsnRoses.png');
+            }
+            .category__cover_DraftPunkMix-YTM {
+                @include card-cover (17rem, 17rem, 50%, '/assets/image/DraftPunkMix.png');
+            }
+            .category__cover_DavidBowieMix-YTM {
+                @include card-cover (17rem, 17rem, 50%, '/assets/image/DavidBowieMix.png');
+            }
+
+
             .category__title-group {
                 @include display ($jus: space-between);
 
