@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+<!--navigation-->
+<input type="checkbox" id="friends-toggle" style="display: none;">
 <header class="header">
   <nav class="nav">
 
@@ -51,11 +52,17 @@
         </a>
       </li>
 
-      <li class="nav__item">
+      <!-- <li class="nav__item">
         <a href="#" class="nav__link">
           <img class="nav__icon" src="./assets/header-icons/friends-icon.png" alt="friends-icon">
          
         </a>
+      </li> -->
+      
+      <li class="nav__item">
+        <label for="friends-toggle" class="nav__friends-trigger">
+          <img class="nav__icon" src="./assets/header-icons/friends-icon.png" alt="Friends Activity">
+        </label>
       </li>
 
       <li class="nav__item">
@@ -75,9 +82,103 @@
 
   </nav>
 </header>
+<!--left side-bar-->
+<aside class="sidebar"> <nav class="nav-aside" aria-label="Main Navigation">
+    <ul class="nav-aside__list">
+      
+      <li class="nav-aside__item">
+        <a href="/" class="nav-aside__link nav-aside__link--active">
+          <img class="nav-aside__icon" src="./assets/aside-icons/library-icon.png" alt="library" aria-hidden="true">
+          <span class="nav-aside__text">My Library</span>
+        </a>
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/search" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/pin-icon.png" alt="pin" aria-hidden="true">
+          <span class="nav-aside__text">Pins</span>
+        </a>
+        <img  class="nav-aside__icon" src="./assets/aside-icons/vector-icon.png" alt="vector">
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/library" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/playlist-icon.png" alt="playlist" aria-hidden="true">
+          <span class="nav-aside__text">Playlists</span>
+        </a>
+        <img  class="nav-aside__icon" src="./assets/aside-icons/vector-icon.png" alt="vector">
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/library" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/heart-icons.png" alt="heart" aria-hidden="true">
+          <span class="nav-aside__text">Liked songs</span>
+        </a>
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/library" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/albums-icons.png" alt="albums" aria-hidden="true">
+          <span class="nav-aside__text">Albums</span>
+        </a>
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/library" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/folders-icons.png" alt="folders" aria-hidden="true">
+          <span class="nav-aside__text">Folders</span>
+        </a>
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/library" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/podcasts-icons.png" alt="Podcasts" aria-hidden="true">
+          <span class="nav-aside__text">Podcasts</span>
+        </a>
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/library" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/audiobooks-icons.png" alt="Audiobooks" aria-hidden="true">
+          <span class="nav-aside__text">Audiobooks</span>
+        </a>
+      </li>
+
+      <li class="nav-aside__item">
+        <a href="/library" class="nav-aside__link">
+          <img class="nav-aside__icon" src="./assets/aside-icons/artists-icons.png" alt="Artists" aria-hidden="true">
+          <span class="nav-aside__text">Artists</span>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+</aside>
+<!--right side-bar-->
+  <aside class="friends-sidebar">
+  <div class="friends-sidebar__header">
+    <span class="friends-sidebar__title">Friend Activity</span>
+    <img src="./assets/aside-icons/addfriends-icons.png" alt="">
+    <label for="friends-toggle" class="friends-sidebar__close">✕</label>
+  </div>
+
+  <div class="friends-sidebar__content">
+    <div class="friends-sidebar__user">
+      <div class="friends-sidebar__avatar-wrapper">
+        <img src="./assets/user-placeholder.png" alt="" class="friends-sidebar__avatar">
+      </div>
+      <div class="friends-sidebar__info">
+        <span class="friends-sidebar__name">Lasha T.</span>
+        <span class="friends-sidebar__status">Listening to: Bohemian Rhapsody</span>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<label for="friends-toggle" class="friends-overlay"></label> 
+    <main>
   
-   
-    <main></main>
+    </main>
     <footer></footer>
 </body>
 </html>

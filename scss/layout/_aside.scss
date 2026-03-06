@@ -1,9 +1,78 @@
 @use '../abstract/_variables'as *;
 
 body {
-    background-color: $primary-bg;
-    color: aliceblue;
+    background-color:  #060606;
+    color: rgb(99, 101, 104);
 }
-.nav-bar {
+.nav-aside {
  display: flex;
+ flex-direction: column;
+ position: relative;
+ column-gap: 2.7rem;
+}
+.nav-aside__item {
+display: flex;
+justify-content: space-between;
+}
+
+.nav-aside__list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 1.8rem 3rem;
+}
+.nav-aside__link{
+    display: flex;
+    align-items: center;
+     gap: 2rem;
+    
+}
+.nav-aside__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.nav-aside__text {
+  display: inline-block;
+  color: $primary-bt-icon;
+}
+
+/* ნაცვლად .friends-control-ისა, გამოვიყენოთ პირდაპირ ID */
+#friends-toggle:checked ~ .friends-sidebar {
+    transform: translateX(0);
+}
+
+#friends-toggle:checked ~ .friends-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* საწყისი მდგომარეობა (დარწმუნდი რომ ეს გიწერია) */
+.friends-sidebar {
+    position: fixed;
+    right: 0;
+    top: 5rem;
+    width: 200px;
+    height: 100vh;
+    transform: translateX(100%); /* დამალულია მარჯვნივ */
+    transition: transform 0.4s ease;
+    z-index: 2000;
+    background: #000; /* ფერი რომ დავინახოთ */
+    border: 0.05rem solid #202020 ;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.friends-overlay {
+    position: fixed;
+    top: 4.5rem;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    
+    z-index: 1500;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s;
+    
 }
