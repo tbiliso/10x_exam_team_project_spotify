@@ -7,16 +7,21 @@
 
 .main-content {
     padding: 1.2rem 2.5rem;
-    background-color: rgba(6, 6, 6, 0.8);
+    background-color: rgba(06, 06, 06, 1);
+    
+    // vertical scroll
+    flex: 1;            // დაიკავებს მთელ თავისუფალ ადგილს ჰედერსა და ფუტერს შორის
+    overflow-y: auto;   // ვერტიკალური სქროლი ჩაირთვება მხოლოდ აქ
+    scroll-behavior: smooth; // რომ ისრებმა რბილად ასრიალონ კონტენტი
 
     .main-hdr {
-        @include display ($jus: space-between);
-
+        @include display ($jus: space-between,$gap: 1rem);
+        padding-bottom: 1.6rem
         ;
     }
 
     .category {
-
+        padding-bottom: 3rem;;
         &__hdr {
             @include display ($jus: space-between);
 
@@ -39,7 +44,7 @@
             }
         }
 
-        // scroll functional 
+        
         &__action {
             display: flex;
             gap: 0.8rem;
@@ -51,14 +56,40 @@
                 justify-content: center;
             }
         }
+
         // scroll functional 
         &__card {
             flex-shrink: 0; // ბარათები არ დაპატარავდეს
-            width: 180px; // ან შენი მიქსინის ზომა
+            width: 170px; // ან შენი მიქსინის ზომა
             scroll-snap-align: start; // ბარათი გასწორდეს კუთხეში
+            position: relative;
+            .category__cover{
+                display: flex;
+                transform: scale(1.1);
+                justify-content: end;
+                align-items: end;
+                .play{
+                    opacity: 0;
+                }
+            }
+           
+            &:hover{
+                transform: scale(1.04);
+                transition: all 0.3s ease;
+                cursor: pointer;
+                .play{
+                    opacity: 1;
+                    transform: translateX(  -2rem) translateY(-2rem);
+                    transition: all 0.3s ease;
+                }
+                
+            }
+            
+            
 
             .category__cover_discover {
                 @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/coverDiscoverWeekly.png');
+                
             }
 
             .category__cover_DailyMix1 {
@@ -141,6 +172,7 @@
 
                 .category__card-title {
                     @include text-style (1.4rem, 500, #E0E0E0);
+                    padding: 0.6rem 0 0.8rem 0;
                 }
             }
 
@@ -148,6 +180,7 @@
                 @include text-style (1.2rem, 400, #898989);
             }
         }
+        
     }
 
 }
