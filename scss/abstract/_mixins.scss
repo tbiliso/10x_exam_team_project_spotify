@@ -1,4 +1,30 @@
 
+@use './variables' as *;
+
+// width, height, border-radius
+@mixin card-cover ($wd, $heig, $br,$url){
+    width: $wd;
+    height: $heig;
+    border-radius: $br;
+    background-image: url($url);
+}
+
+@mixin text-style ($fs,$weight, $clr ) {
+    font-size: $fs;
+    font-weight: $weight;
+    color: $clr;
+}
+
+// border-radius, padding, font-size
+@mixin btn ($br, $padv, $padh, $fs, $bg-clr, $txt-clr) {
+    border-radius: $br;
+    padding: $padv $padh;
+    font-size: $fs;
+    background-color: $bg-clr;
+    color: $txt-clr;
+}
+
+
 
 // ვახოს მიქსინი რომელსაც მეცვიყენებ დამერჯვისას წაშალე
 @mixin display ($disp: flex, $fdir: row, $jus: center, $aln: center, $gap: null) {

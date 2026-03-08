@@ -1,0 +1,153 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.hidden {
+    display: none;
+}
+
+.main-content {
+    padding: 1.2rem 2.5rem;
+    background-color: rgba(6, 6, 6, 0.8);
+
+    .main-hdr {
+        @include display ($jus: space-between);
+
+        ;
+    }
+
+    .category {
+
+        &__hdr {
+            @include display ($jus: space-between);
+
+            .category__title {
+                @include text-style (2rem, 700, #E0E0E0)
+            }
+        }
+
+        // scroll functional 
+        &__body {
+            display: flex; // ბარათები ერთ ხაზზე
+            overflow-x: auto; // ჰორიზონტალური სქროლი
+            scroll-behavior: smooth; // რბილი გადასვლა ისრებზე
+            scroll-snap-type: x mandatory; // მაგნიტის ეფექტი
+            gap: 2.4rem; // დაშორება ბარათებს შორის
+            padding-bottom: 1rem; // მცირე დაშორება ქვემოთ
+
+            &::-webkit-scrollbar {
+                display: none; // სქროლბარის დამალვა
+            }
+        }
+
+        // scroll functional 
+        &__action {
+            display: flex;
+            gap: 0.8rem;
+            align-items: center;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        // scroll functional 
+        &__card {
+            flex-shrink: 0; // ბარათები არ დაპატარავდეს
+            width: 180px; // ან შენი მიქსინის ზომა
+            scroll-snap-align: start; // ბარათი გასწორდეს კუთხეში
+
+            .category__cover_discover {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/coverDiscoverWeekly.png');
+            }
+
+            .category__cover_DailyMix1 {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DailyMix1.png');
+            }
+
+            .category__cover_DailyMix2 {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DailyMix2.png');
+            }
+
+            .category__cover_DailyMix3 {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DailyMix3.png');
+            }
+
+            .category__cover_DailyMix4 {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DailyMix4.png');
+            }
+
+            .category__cover_DailyMix6 {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DailyMix6.png');
+            }
+
+            .category__cover_Nirvana {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/Nirvana.png');
+            }
+
+            .category__cover_MixOutBoy {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/FallOutBoy.png');
+            }
+
+            // Your top mixes category covers
+
+             .category__cover_RockMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/RockMix.png');
+            }
+
+            .category__cover_ChillMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/ChillMix.png');
+            }
+
+            .category__cover_PopMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/PopMix.png');
+            }
+
+            .category__cover_DraftPunkMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DraftPunkMix.png');
+            }
+
+            .category__cover_HappyMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/HappyMix.png');
+            }
+
+            .category__cover_DavidBowieMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DavidBowieMix.png');
+            }
+
+            .category__cover_UpbeatMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/UpbeatMix.png');
+            }
+
+            .category__cover_60sMix {
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/60sMix.png');
+            }
+
+
+            // Your top mixes covers
+            .category__cover_GunsnRoses-YTM {
+                @include card-cover (17rem, 17rem, 50%, '/assets/image/GunsnRoses.png');
+            }
+            .category__cover_DraftPunkMix-YTM {
+                @include card-cover (17rem, 17rem, 50%, '/assets/image/DraftPunkMix.png');
+            }
+            .category__cover_DavidBowieMix-YTM {
+                @include card-cover (17rem, 17rem, 50%, '/assets/image/DavidBowieMix.png');
+            }
+
+
+            .category__title-group {
+                @include display ($jus: space-between);
+
+                .category__card-title {
+                    @include text-style (1.4rem, 500, #E0E0E0);
+                }
+            }
+
+            .category__content {
+                @include text-style (1.2rem, 400, #898989);
+            }
+        }
+    }
+
+}
