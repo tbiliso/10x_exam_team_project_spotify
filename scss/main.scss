@@ -9,3 +9,70 @@
 @use './components/_button'as *;
 @use './components/_card'as *;
 @use './pages/_home'as *;
+@use './pages/library'as *;
+
+
+// body {
+//   margin: 0;
+//   display: grid;
+//   // მხოლოდ 2 სვეტი: საიდბარი (300px) და მეინი (დარჩენილი 1fr)
+//   grid-template-columns: 300px 1fr;
+//   grid-template-rows: auto 1fr;
+//   min-height: 100vh;
+//   background-color: #060606;
+// }
+
+// .header {
+//   grid-column: 1 / -1; // ჰედერი ისევ მთელ სიგანეზეა
+//   grid-row: 1;
+  
+// }
+
+// .sidebar {
+//   grid-column: 1;
+//   grid-row: 2;
+// }
+
+// main {
+//   grid-column: 2; // მეინი იკავებს მთელ დარჩენილ ადგილს მარჯვნივ
+//   grid-row: 2;
+// }
+
+body {
+  margin: 0;
+  display: grid;
+  // 1-ლი სვეტი საიდბარისთვის (300px), მე-2 სვეტი ყველაფერი დანარჩენისთვის (1fr)
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: auto 1fr; 
+  min-height: 100vh;
+  background-color: #060606;
+}
+
+.sidebar {
+  grid-column: 1;    // იკავებს მხოლოდ პირველ სვეტს
+  grid-row: 1 / 3;   // იწყება სულ ზემოდან და ჩადის ბოლომდე
+  
+  background-color: #121212; // აი აქ მიეცი ფერი, რომ ბოლომდე ჩავიდეს
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.header {
+  // აი აქ არის ცვლილება:
+  grid-column: 2;    // დაიწყება მხოლოდ მე-2 სვეტიდან (საიდბარის მერე)
+  grid-row: 1;       // დაჯდება პირველ ხაზზე
+  
+  width: 100%;       // ეს 100% ნიშნავს მე-2 სვეტის 100%-ს და არა მთელი ეკრანის
+  
+  background-color: #060606;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+main {
+  grid-column: 2;    // ესეც მხოლოდ მე-2 სვეტშია
+  grid-row: 2;       // დაჯდება ჰედერის ქვემოთ
+  padding: 2.4rem;
+}

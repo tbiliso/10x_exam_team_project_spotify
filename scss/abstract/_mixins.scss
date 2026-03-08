@@ -1,0 +1,10 @@
+
+
+// ვახოს მიქსინი რომელსაც მეცვიყენებ დამერჯვისას წაშალე
+@mixin display ($disp: flex, $fdir: row, $jus: center, $aln: center, $gap: null) {
+    display: $disp;
+    flex-direction: $fdir;
+    justify-content: $jus;
+    align-items: $aln;
+    gap: $gap;
+}
