@@ -25,6 +25,7 @@
     }
     }
 
+
     .category {
 
         &__hdr {
@@ -66,6 +67,8 @@
             flex-shrink: 0; // ბარათები არ დაპატარავდეს
             width: 17rem; // ან შენი მიქსინის ზომა
             scroll-snap-align: start; // ბარათი გასწორდეს კუთხეში
+
+            
 
             .category__cover_discover {
                 @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/coverDiscoverWeekly.png');
@@ -159,6 +162,28 @@
             }
         }
     }
+
+    .category__cover {
+    width: 17rem;
+    height: 17rem;
+    border-radius: 0.725rem;
+    background-size: cover;
+    position: relative;
+    margin-top: 2rem; // აუცილებელია, რომ ზედა "ფენებისთვის" ადგილი დარჩეს
+
+    // 💡 აი აქ ხდება მაგია:
+    // ფორმატი: x y blur spread color
+    // blur-ს ვსვამთ 0-ზე, რომ მკვეთრი ხაზები მივიღოთ
+    box-shadow: 
+        0 -1rem 0 -0.4rem #3d223d, // პირველი ფენა (ოდნავ ვიწრო და მაღლა)
+        0 -2rem 0 -0.8rem #1a121a;   // მეორე ფენა (კიდევ უფრო ვიწრო და მაღლა)
+    
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-0.5rem); // ჰოვერზე ოდნავ "ამოიწევა"
+    }
+}
 
 }
 

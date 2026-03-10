@@ -21,3 +21,8 @@ $genre-list: (
     "trending":#B02897,
     "spotysingles":#777777,
 );
+@each $name, $color in $genre-list {
+    .text-color_#{$name} {
+        color: $color;
+    }
+}

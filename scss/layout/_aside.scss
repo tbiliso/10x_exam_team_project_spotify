@@ -87,8 +87,8 @@ body {
     transform: scale(1.05); // 5%-ით იზრდება
 
     svg path {
-      fill: #fff !important;
-      stroke: #fff !important;
+      fill: #fff ;
+      stroke: #fff;
     }
     
     .nav-aside__icon {
