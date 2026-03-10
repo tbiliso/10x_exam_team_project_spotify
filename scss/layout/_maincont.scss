@@ -1,3 +1,4 @@
+@use "sass:color";
 @use '../abstract/variables' as *;
 @use '../abstract/mixins' as *;
 
@@ -12,7 +13,16 @@
     .main-hdr {
         @include display ($jus: space-between);
 
-        ;
+        &__btn {
+        // მაგალითად: რადიუსი 30px, პადინგი 0.8rem და 1.5rem, ფონტი 1.4rem
+        // ფონი: მუქი ნაცრისფერი, ტექსტი: თეთრი
+        @include btn (0.8rem, 0.8rem, 1.5rem, 1.4rem, #282828, #ffffff);
+ 
+        
+        &:first-child {
+            @include btn (0.8rem, 0.8rem, 1.5rem, 1.4rem, #E0E0E0, #000000);
+        }
+    }
     }
 
     .category {
@@ -54,7 +64,7 @@
         // scroll functional 
         &__card {
             flex-shrink: 0; // ბარათები არ დაპატარავდეს
-            width: 180px; // ან შენი მიქსინის ზომა
+            width: 17rem; // ან შენი მიქსინის ზომა
             scroll-snap-align: start; // ბარათი გასწორდეს კუთხეში
 
             .category__cover_discover {
@@ -151,3 +161,4 @@
     }
 
 }
+
