@@ -1,0 +1,15 @@
+@use "sass:color";
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+@use '../base/typography' as *;
+
+.bg-color-library {
+    background-color:  #111111;
+
+}
+.main-hdr__btns {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+}
