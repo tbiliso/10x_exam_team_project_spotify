@@ -1,0 +1,33 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+
+@media screen and (max-width: 37.5rem) {
+
+    body {
+        // background-color: #111111;
+        background-color: #111111 !important;
+
+    }
+
+    .mobile-layout {
+        width: 100vw;
+        padding: 0.9rem 1.5rem;
+        .mobileMain__content {
+            
+            .mobileMain-hdr {
+
+                @include display ($jus: space-between,$gap: 1rem);
+
+                &__btn{
+                    @include btn (0.8rem, 0.8rem, 1.5rem, 1.4rem, #282828, #ffffff);
+                }
+            }
+        }
+
+        .mobileCards{
+            padding: 0.8rem 0 0.7rem 0.8rem;
+        }
+    }
+
+}

@@ -13,6 +13,7 @@
 @use './layout/aside' as *;
 @use './layout/footer' as *;
 @use './layout/maincont' as *;
+@use './layout/_maincontMobile' as *;
 
 // 4. Components
 @use './components/button' as *;
