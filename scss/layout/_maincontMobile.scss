@@ -1,5 +1,5 @@
 @use '../abstract/variables' as *;
-@use '../abstract/mixins' as *;
+@use '../abstract/_mixins' as *;
 
 
 @media screen and (max-width: 37.5rem) {
@@ -12,21 +12,49 @@
 
     .mobile-layout {
         width: 100vw;
-        padding: 0.9rem 1.5rem;
+        // padding: 0.9rem 1.5rem;
+
         .mobileMain__content {
-            
+
             .mobileMain-hdr {
 
-                @include display ($jus: space-between,$gap: 1rem);
+                @include display ($jus: space-between, $gap: 1rem);
 
-                &__btn{
+                &__btn {
                     @include btn (0.8rem, 0.8rem, 1.5rem, 1.4rem, #282828, #ffffff);
                 }
             }
         }
 
-        .mobileCards{
+        .mobileCards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
             padding: 0.8rem 0 0.7rem 0.8rem;
+
+            width: 100%;
+
+            .mobileCards__card {
+                width: 17.5rem;
+
+                @include display ($gap: 1rem);
+
+                &-ram {
+                    border-radius: 0.3rem;
+                }
+
+                .mobileCards__content {
+                    min-width: 0;
+                    .mobileCards__title {
+                        @include text-style ($fs: 1.4rem, $weight: 400, $clr: #E0E0E0);
+                        display: block;
+                        width: 100%; // ან ნებისმიერი ფიქსირებული ზომა/პროცენტი
+                        white-space: nowrap; // ტექსტი არ გადავიდეს მეორე ხაზზე
+                        overflow: hidden; // რაც არ ეტევა, დაიმალოს
+                        text-overflow: ellipsis; // აი ეს აჩენს სამ წერტილს (...)
+                    }
+                }
+            }
         }
     }
 
