@@ -17,16 +17,19 @@
     .mobile-layout {
         // width: 100vw;
         width: 100%;
-        // padding: 0.9rem 1.5rem;
+        padding: 0.9rem 1.5rem;
 
         .mobileMain__content {
 
             .mobileMain-hdr {
-
-                @include display ($jus: space-between, $gap: 1rem);
-
+                
+                @include display ($jus: space-between, $gap:1rem);
+                @include text-style ($fs:1.4rem, $weight: 400, $clr: #E0E0E0);
                 &__btn {
-                    @include btn (0.8rem, 0.8rem, 1.5rem, 1.4rem, #282828, #ffffff);
+                    @include btn (0.8rem, 0.8rem, 1rem, 1.2rem, #282828, #ffffff);
+                }
+                &__button{
+                     @include display ($jus: space-between);
                 }
             }
 
@@ -67,7 +70,7 @@
 
             .MobileCat {
                 padding: 3rem 0 1.5rem 1.6rem;
-
+                
                 &__title {
                     @include text-style(2rem, 700, #E0E0E0);
                 }
@@ -119,6 +122,18 @@
 
                     .MobileCat__cover_DailyMix2 {
                         @include card-cover (14.1rem, 14.1rem, 0.6rem, '/assets/image/DailyMix2.png');
+                    }
+
+                    .MobileCat__cover_RockMix {
+                        @include card-cover (14.1rem, 14.1rem, 0.6rem, '/assets/image/RockMix.png');
+                    }
+
+                    .MobileCat__cover_ChillMix {
+                        @include card-cover (14.1rem, 14.1rem, 0.6rem, '/assets/image/ChillMix.png');
+                    }
+
+                    .MobileCat__cover_PopMix {
+                        @include card-cover (14.1rem, 14.1rem, 0.6rem, '/assets/image/PopMix.png');
                     }
                 }
             }
