@@ -1,4 +1,4 @@
-// @use "sass:color" as *;
+
 @use '../abstract/variables' as *;
 @use '../abstract/mixins' as *;
 
@@ -35,10 +35,9 @@
     }
 
 
-    .category {
+ 
+     .category {
         padding-bottom: 3rem;
-        ;
-
         &__hdr {
             @include display ($jus: space-between);
 
@@ -115,29 +114,45 @@
 
 
 
-            .category__cover_discover {
+            .category__cover_discover  {
                 @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/coverDiscoverWeekly.png');
 
             }
 
             .category__cover_DailyMix1 {
                 @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DailyMix1.png');
+                box-shadow: 
+                    0 -1rem 0 -0.4rem rgba(28, 116, 81, 0.671),   // პირველი ფენა (მუქი, 30% opacity)
+                    0 -2rem 0 -0.8rem #1ED76026; // მეორე ფენა (გამჭვირვალე ნაცრისფერი) background: rgba(244, 184, 189, 0.3);
+
             }
 
             .category__cover_DailyMix2 {
                 @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DailyMix2.png');
+                box-shadow: 
+                    0 -1rem 0 -0.4rem  rgba(244, 184, 189, 0.3),   // პირველი ფენა (მუქი, 30% opacity)
+                    0 -2rem 0 -0.8rem #1ED76026; // მეორე ფენა (გამჭვირვალე ნაცრისფერი) background: background: ;
+
             }
 
             .category__cover_DailyMix3 {
                 @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DailyMix3.png');
+                 box-shadow: 
+                    0 -1rem 0 -0.4rem rgba(195, 231, 183, 0.3),   // პირველი ფენა (მუქი, 30% opacity)
+                    0 -2rem 0 -0.8rem #1ED76026; // 
             }
 
             .category__cover_DailyMix4 {
-                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DailyMix4.png');
+                @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DailyMix4.png'); 
+                
+
             }
 
             .category__cover_DailyMix6 {
                 @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DailyMix6.png');
+                box-shadow: 
+                    0 -1rem 0 -0.4rem  rgba(160, 190, 200, 0.3),   // პირველი ფენა (მუქი, 30% opacity)
+                    0 -2rem 0 -0.8rem #1ED76026; //
             }
 
             .category__cover_Nirvana {
@@ -152,10 +167,20 @@
 
             .category__cover_RockMix {
                 @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/RockMix.png');
+                box-shadow: 
+                    0 -1rem 0 -0.4rem rgba(204, 246, 101, 0.3),   // პირველი ფენა (მუქი, 30% opacity)background: rgba(249, 231, 44, 0.3);
+
+                    0 -2rem 0 -0.8rem #1ED76026; // 
+                
+
             }
 
             .category__cover_ChillMix {
                 @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/ChillMix.png');
+                box-shadow: 
+                    0 -1rem 0 -0.4rem rgba(249, 231, 44, 0.3),   // პირველი ფენა (მუქი, 30% opacity)background: 
+
+                    0 -2rem 0 -0.8rem #1ED76026; // 
             }
 
             .category__cover_PopMix {
@@ -164,6 +189,11 @@
 
             .category__cover_DraftPunkMix {
                 @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DraftPunkMix.png');
+                box-shadow: 
+                    0 -1rem 0 -0.4rem rgba(111, 134, 255, 0.3),   // პირველი ფენა (მუქი, 30% opacity)background: 
+
+                    0 -2rem 0 -0.8rem #1ED76026; // 
+
             }
 
             .category__cover_HappyMix {
@@ -172,6 +202,11 @@
 
             .category__cover_DavidBowieMix {
                 @include card-cover (17rem, 17rem, 0.725rem, '/assets/image/DavidBowieMix.png');
+                box-shadow: 
+                    0 -1rem 0 -0.4rem rgba(255, 198, 104, 0.3),   // პირველი ფენა (მუქი, 30% opacity)background: 
+
+                    0 -2rem 0 -0.8rem #1ED76026; // 
+
             }
 
             .category__cover_UpbeatMix {
@@ -186,14 +221,17 @@
             // Your top mixes covers
             .category__cover_GunsnRoses-YTM {
                 @include card-cover (17rem, 17rem, 50%, '/assets/image/GunsnRoses.png');
+                box-shadow: none;
             }
 
             .category__cover_DraftPunkMix-YTM {
                 @include card-cover (17rem, 17rem, 50%, '/assets/image/DraftPunkMix.png');
+                box-shadow: none;
             }
 
             .category__cover_DavidBowieMix-YTM {
                 @include card-cover (17rem, 17rem, 50%, '/assets/image/DavidBowieMix.png');
+                box-shadow: none;
             }
 
 
@@ -237,3 +275,4 @@
 
     .mobile-view{display: none;}
 }
+

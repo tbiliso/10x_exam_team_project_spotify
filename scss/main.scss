@@ -1,5 +1,4 @@
 
-// @use "sass:color";
 @use './abstract/variables' as *;
 @use './abstract/mixins' as *;
 
@@ -20,9 +19,10 @@
 @use './components/card' as *;
 
 // 5. Pages
-@use './pages/home' as *;
-@use './pages/search' as *;
-@use './pages/library' as *;
+@use './pages/home';
+@use './pages/search';
+@use './pages/library';
+@use './pages/likedsongs';
 
 
 

@@ -1,4 +1,4 @@
-// @use "sass:color";
+
 @use './variables' as *;
 
 // 1. ქარდის ქავერი
@@ -19,7 +19,7 @@
     color: $clr;
 }
 
-// 3. ღილაკის მიქსინი (გასწორებული color.adjust-ით)
+// 3. ღილაკის მიქსინი 
 @mixin btn ($br, $padv, $padh, $fs, $bg-clr, $txt-clr) {
     border-radius: $br;
     padding: $padv $padh;
