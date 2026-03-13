@@ -3,19 +3,20 @@
 @use './abstract/mixins' as *;
 
 // 2. Base styles
-@use './base/reset';
-@use './base/typography';
+@use './base/reset' as *;
+@use './base/typography' as *;
 
 // 3. Layout components
-@use './layout/header';
-@use './layout/navigation';
-@use './layout/aside';
-@use './layout/footer';
-@use './layout/maincont';
+@use './layout/header' as *;
+@use './layout/navigation' as *;
+@use './layout/aside' as *;
+@use './layout/footer' as *;
+@use './layout/maincont' as *;
+@use './layout/maincontMobile' as *;
 
 // 4. Components
-@use './components/button';
-@use './components/card';
+@use './components/button' as *;
+@use './components/card' as *;
 
 // 5. Pages
 @use './pages/home';
@@ -25,7 +26,7 @@
 
 
 
-body {
+body,.desktop-wrapper {
   margin: 0;
   display: grid; 
   grid-template-columns: 259px 1fr;
