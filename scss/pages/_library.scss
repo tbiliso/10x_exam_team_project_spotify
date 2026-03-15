@@ -75,8 +75,12 @@
             flex-shrink: 0; // ბარათები არ დაპატარავდეს
             width: 17rem; // ან შენი მიქსინის ზომა
             scroll-snap-align: start; // ბარათი გასწორდეს კუთხეში
-
-            
+            position: relative;
+            .library__svg-icon {
+             position: absolute;
+             top: 0;
+             right: 0;
+            }
 
             .library__cover_discover {
                 @include card-cover (17rem, 17rem, 0.725rem, '/assets/library-img/greenheart.png');

@@ -2,11 +2,9 @@
 @use '../abstract/mixins' as *;
 
 .mobile-navigation {
-
   margin: 0.8rem;
   width: 100%;
-  background: transparent;
-  
+  background: transparent; 
 }
 .mobile-navigation__list {
  display: flex;
@@ -55,3 +53,4 @@ font-size: 14px;
 display: flex;
 gap: 1rem;
 }
+

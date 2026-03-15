@@ -14,15 +14,17 @@
 @use './layout/maincont' as *;
 @use './layout/maincontMobile' as *;
 
+
 // 4. Components
 @use './components/button' as *;
 @use './components/card' as *;
 
 // 5. Pages
-@use './pages/home';
+
 @use './pages/search';
 @use './pages/library';
 @use './pages/likedsongs';
+@use './pages/discovery';
 
 
 

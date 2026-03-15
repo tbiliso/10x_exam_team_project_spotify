@@ -69,12 +69,61 @@
 }
 
 .category__card {
-    // ... შენი არსებული კოდი ...
+   position: relative;
 
     .category__svg-icon {
-        display: block;      // აუცილებელია, რომ მარჯინმა იმუშაოს
-        margin-left: auto;   // მთელ თავისუფალ ადგილს იკავებს მარცხნივ
-        margin-right: 0;     // ეკვრის მარჯვენა კიდეს
-        margin-bottom: 1rem; // მცირე დაშორება ქვედა ელემენტისგან
+      
+      position: absolute;
+      top: 0;
     }
+}
+
+.mobile-search-view {
+display: none;
+}
+
+
+
+@media (max-width: 600px) {
+
+    body,
+    .mobile-search-view {
+        grid-template-columns: 1fr !important;
+        display: grid !important; // აუქმებს grid-template-columns-ს
+        width: 100%;
+        overflow-x: hidden; // მთლიანი გვერდი რომ არ სრიალებდეს
+        // display: inline-block !important;
+        background-color: #111111 !important;
+
+        .desktop-wrapper, .sidebar, .main-footer, .main-content, .header {
+            display: none;
+        }
+    }
+    .mobile-search-view {
+       padding: 2rem;
+    }
+    
+    .search__body {
+     display: grid;
+     grid-template-columns: 2fr 2fr;
+     gap: 3rem;
+    
+
+    }
+
+    .search-layout {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+
+    } 
+    .search__card {
+    height: 15rem;
+    }
+    .search__header {
+    display: flex;
+    justify-content: space-between;
+    }
+    
+
 }
