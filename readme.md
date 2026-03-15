@@ -1,77 +1,87 @@
-🎵 Spotify Clone (Team Project)
-ეს არის Spotify-ის ფუნქციონალური კლონი, შექმნილი გუნდური მუშაობის ფარგლებში. პროექტი ფოკუსირებულია სუფთა კოდზე, მოდულარულ SASS არქიტექტურასა და მრავალგვერდიან (Multi-page) ნავიგაციაზე.
+   🎵 Spotify Clone (Team Project)
 
-🏗 პროექტის სტრუქტურა
-პროექტი ორგანიზებულია შემდეგი იერარქიით:
+This is a functional Spotify clone built as part of a collaborative team project. The primary focus of this project is on writing clean code, implementing a modular SASS architecture, and managing multi-page navigation.
 
-HTML გვერდები:
+🏗 Project Structure
 
-index.html - მთავარი გვერდი (Home).
+The project is organized with a clear hierarchy to ensure scalability and maintainability:
 
-search.html - ძიების გვერდი.
+HTML Pages:
+index.html – Home page interface.
 
-library.html - მომხმარებლის ბიბლიოთეკა.
+search.html – Search functionality and browse categories.
 
-likedsongs.html - მოწონებული სიმღერების სექცია.
+library.html – User's personal music library.
 
-Assets: ყველა ვიზუალური რესურსი (icons, images) დახარისხებულია შესაბამისი სექციების მიხედვით (Header, Footer, Aside).
+liked-songs.html – Dedicated section for favorite tracks.
 
-SASS (SCSS): გამოყენებულია მოდულარული მიდგომა:
+Assets:
+All visual resources (icons, images) are categorized based on their specific UI sections, such as Header, Footer, and Aside.
 
-abstract/ - ცვლადები და მიქსინები.
+SASS (SCSS) Architecture:
+We followed the 7-1 Pattern for modular styling:
 
-base/ - საბაზისო სტილები და Reset.
+abstract/ – Global variables and reusable mixins.
 
-components/ - რეიუზაბელური ელემენტები (Cards, Buttons).
+base/ – Reset styles and typography.
 
-layout/ - გვერდის ძირითადი ჩონჩხი (Sidebar, Player).
+components/ – Reusable UI elements (Cards, Buttons, etc.).
 
-pages/ - კონკრეტული გვერდების ინდივიდუალური სტილები.
+layout/ – The structural skeleton of the site (Sidebar, Player, Grid).
 
+pages/ – Specific styles unique to individual pages.
 
-🛠 ტექნოლოგიური სტეკი : 
-HTML5 (Semantic Markup)
+🛠 Technology Stack
+HTML5: Semantic markup for better SEO and accessibility.
 
-SASS / SCSS (Advanced Styling)
+SASS / SCSS: Advanced modular styling and pre-processing.
 
-CSS3 (Flexbox & Grid Layouts)
+CSS3: Layouts powered by Flexbox and CSS Grid.
 
-📂 ფაილების ხე (Project Tree)
-შეგიძლია ეს ნაწილი პირდაპირ ჩასვა, რომ სხვამაც დაინახოს შენი ორგანიზებული კოდი:
+📂 Project Tree
+You can explore the organized directory structure below:
 
 Plaintext
 
-├── assets/              # სურათები და იქონები
-├── css/                 # კომპილირებული CSS ფაილები
-├── scss/                # SASS არქიტექტურა
+├── assets/              # Images and Icons
+├── css/                 # Compiled CSS files
+├── scss/                # SASS Architecture
 │   ├── abstract/        # Variables, Mixins
 │   ├── base/            # Reset, Typography
 │   ├── components/      # UI Components
 │   ├── layout/          # Global layout (Header, Footer)
 │   ├── pages/           # Page-specific styles
-│   └── main.scss        # მთავარი იმპორტ ფაილი
+│   └── main.scss        # Main entry point for styles
 ├── index.html           # Home Page
 ├── library.html         # Library Page
 ├── liked-songs.html     # Liked Songs Page
 └── search.html          # Search Page
+🚀 Installation & Preview
+If you want to view the project locally:
 
-🚀 ინსტალაცია
+Clone the repository:
 
-
-თუ გსურთ პროექტის ლოკალურად ნახვა:
+Screenshots
 <img src="./_projects-screen/Screenshot 2026-03-15 124353.png">
-<img src="./_projects-screen/127.0.0.1_5502_search.html.png">
+<img src="./_projects-screen/127.0.0.1_5501_search.html.png">
 <img src="./_projects-screen/127.0.0.1_5502_library.html.png">
 <img src="./_projects-screen/127.0.0.1_5501_likedsongs.html.png">
 <img src="./_projects-screen/127.0.0.1_5501_discovery.html_1.png">
 <img src="./_projects-screen/127.0.0.1_5501_discovery.html.png">
-<img src="./_projects-screen/127.0.0.1_5501_likedsongs.html.png">
-<img src="./_projects-screen/Screenshot_2026-03-14_231034.png">
 <img src="./_projects-screen/Screenshot_2026-03-14_231034.png">
 <img src="./_projects-screen/127.0.0.1_5501_search.html_1.png">
 
 
-მოახდინეთ რეპოზიტორის კლონირება
 
-👤 ავტორები
-10X Exam Team : Vakhtangi Javakhishvili  , Mariami Tsabadze , Gurami Endeladze 
+
+🔗 Repository
+[View on GitHub](https://github.com/tbiliso/10x_exam_team_project_spotify.git)
+
+👤 Authors
+10X Exam Team:
+
+Vakhtangi Javakhishvili
+
+Mariami Tsabadze
+
+Gurami Endeladze
